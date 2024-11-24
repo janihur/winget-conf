@@ -1,0 +1,67 @@
+# yaml-language-server: $schema=https://aka.ms/configuration-dsc-schema/0.2
+properties:
+  configurationVersion: 0.2.0
+  assertions:
+    - resource: Microsoft.Windows.Developer/OsVersion
+      directives:
+        description: Verify minimum Windows version requirement
+        allowPrerelease: true
+      settings:
+          MinVersion: '10.0.19045'
+  resources:
+    # --------------------------------------------------------------------------
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        description: Install Windows Terminal from WinGet
+        allowPrerelease: true
+      settings:
+        id: Microsoft.WindowsTerminal
+        source: winget
+    # --------------------------------------------------------------------------
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        description: Install Mozilla Firefox from WinGet
+        allowPrerelease: true
+      settings:
+        id: Mozilla.Firefox
+        source: winget
+    # --------------------------------------------------------------------------
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        description: Install VLC media player from WinGet
+        allowPrerelease: true
+      settings:
+        id: VideoLAN.VLC
+        source: winget
+    # --------------------------------------------------------------------------
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        description: Install Visual Studio Code from WinGet
+        allowPrerelease: true
+      settings:
+        id: Microsoft.VisualStudioCode
+        source: winget
+    # --------------------------------------------------------------------------
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        description: Install GNU Emacs from WinGet
+        allowPrerelease: true
+      settings:
+        id: GNU.Emacs
+        source: winget
+    # --------------------------------------------------------------------------
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        description: Install Git for Windows from WinGet
+        allowPrerelease: true
+      settings:
+        id: Git.Git
+        source: winget
+    # --------------------------------------------------------------------------
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        description: Install Microsoft PowerShell 7 from WinGet
+        allowPrerelease: true
+      settings:
+        id: Microsoft.PowerShell
+        source: winget
