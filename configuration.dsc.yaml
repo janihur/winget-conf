@@ -20,10 +20,18 @@ properties:
     # --------------------------------------------------------------------------
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       directives:
-        description: Install Mozilla Firefox from WinGet
+        description: Install Mozilla Firefox (en-US) from WinGet
         allowPrerelease: true
       settings:
         id: Mozilla.Firefox
+        source: winget
+    # --------------------------------------------------------------------------
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        description: Install Mozilla Thunderbird (en-US) from WinGet
+        allowPrerelease: true
+      settings:
+        id: Mozilla.Thunderbird
         source: winget
     # --------------------------------------------------------------------------
     - resource: Microsoft.WinGet.DSC/WinGetPackage
